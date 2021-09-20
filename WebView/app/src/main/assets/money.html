@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <style>
+            .form__group {
+                position: relative;
+                padding: 15px 0 0;
+                margin-top: 10px;
+                width: 50%;
+            }
+            .form__field {
+                font-family: inherit;
+                width: 100%;
+                border: 0;
+                border-bottom: 2px solid #9b9b9b;
+                outline: 0;
+                font-size: 1.3rem;
+                color: #fff;
+                padding: 7px 0;
+                background: transparent;
+                transition: border-color 0.2s;
+            }
+            .form__field::placeholder {
+                color: transparent;
+            }
+            .form__field:placeholder-shown ~ .form__label {
+                font-size: 1.3rem;
+                cursor: text;
+                top: 20px;
+            }
+            .form__label {
+                position: absolute;
+                top: 0;
+                display: block;
+                transition: 0.2s;
+                font-size: 1rem;
+                color: #9b9b9b;
+            }
+            .form__field:focus {
+                padding-bottom: 6px;
+                font-weight: 700;
+                border-width: 3px;
+                border-image: white;
+                border-image-slice: 1;
+            }
+            .form__field:focus ~ .form__label {
+                position: absolute;
+                top: 0;
+                display: block;
+                transition: 0.2s;
+                font-size: 1rem;
+                color: white;
+                font-weight: 700;
+            }
+
+            .form__field:required, .form__field:invalid {
+                box-shadow: none;
+            }
+
+            body {
+                font-family: 'Poppins', sans-serif;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                font-size: 1.5rem;
+                background-color: #222;
+            }
+            
+            .bn {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0.7rem 2rem;
+                font-family: "Poppins", sans-serif;
+                font-weight: 700;
+                font-size: 18px;
+                text-align: center;
+                text-decoration: none;
+                color: #fff;
+                backface-visibility: hidden;
+                border: 0.3rem solid transparent;
+                border-radius: 3rem;
+                border-color: transparent;
+                background-color: #fff;
+                color: #000;
+                transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95);
+            }
+            
+            .bn:hover {
+                transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
+            }
+        </style>
+    </head>
+    <script>
+        function loadData() {
+            var data = document.getElementById("number").value;
+            Android.sendData(data);
+        }
+    </script>
+    <body>
+        <div class="form__group field">
+            <input type="number" class="form__field" placeholder="Value" name="number" id="number" required />
+            <label for="number" class="form__label">Value</label>
+            <br><br>
+            <a href="/money.html" class="bn" onclick="loadData()">Button</a>
+        </div>
+    </body>
+</html>

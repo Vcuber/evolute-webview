@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .container {
+                position: relative;
+            }
+
+            table {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-collapse: collapse;
+            }
+            .buton {
+                width: 600%;
+                padding: 10% 10%;
+                border: none;
+                color: var(--white);
+                font-size: 16px;
+                cursor: pointer;
+                border-radius: 8%;
+                transition-duration: 0.5s;
+                background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+                box-shadow: 0% 25% 93.75% 0% #000;
+            }
+            .buton.btn-hover {
+                width: 100%;
+                font-size: 16px;
+                font-weight: 600;
+                color: #fff;
+                cursor: pointer;
+                margin: 20px;
+                height: 55px;
+                text-align: center;
+                border: none;
+                background-size: 300% 100%;
+                -o-transition: all 0.4s ease-in-out;
+                -webkit-transition: all 0.4s ease-in-out;
+                transition: all 0.4s ease-in-out;
+            }
+            .buton.btn-hover:hover {
+                background-position: 100% 0;
+                -o-transition: all 0.4s ease-in-out;
+                -webkit-transition: all 0.4s ease-in-out;
+                transition: all 0.4s ease-in-out;
+            }
+            .buton.btn-hover:focus {
+                outline: none;
+            }
+ 
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <table>
+                <tr>
+                    <td><button onclick="window.location.href='money.html'" class="buton btn btn-hover">Sale</button></td>
+                    <td><button onclick="window.location.href='money.html'" class="buton btn btn-hover">Void</button></td>
+                    <td><button onclick="window.location.href='money.html'" class="buton btn btn-hover">Refund</button></td>
+                </tr>
+                <br />
+                <tr>
+                    <td><button onclick="window.location.href='money.html'" class="buton btn btn-hover">Settlement</button></td>
+                    <td><button onclick="window.location.href='money.html'" class="buton btn btn-hover">Pre Auth</button></td>
+                    <td><button onclick="window.location.href='money.html'" class="buton btn btn-hover">Pre Auth Com</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="window.location.href='video.html'" class="buton btn btn-hover">Videos</button></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
